@@ -1,0 +1,47 @@
+#----------------------------------------
+# Node.js
+#----------------------------------------
+
+#Dependencies
+/node_modules/
+
+#Environment variables
+.env
+.env.*.local
+
+#Logs
+logs
+*.log
+
+#Build output
+dist/
+build/
+
+#Cache
+.cache/ 
+.parcel-cache/
+rollup.cache/
+.eslintcache
+
+#TypeScript
+*.tsbuildinfo
+
+# Custom folders you want to ignore
+backend/data/
+
+# -------------------------
+# VS Code
+# -------------------------
+
+.vscode/*
+# Keep shared settings if you want
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# -------------------------
+# OS / Editor
+# -------------------------
+.DS_Store
+Thumbs.db
