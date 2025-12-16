@@ -1,14 +1,17 @@
-import { addSkillToList } from "./SkillList.js";
+import { renderSkills } from "./SkillList.js";
 
-const skillInput = document.getElementById("skill-input");
-const addSkillBtn = document.getElementById("add-skill-btn");
-
+let skills = [];
 export function setupSkillInput() {
+  const skillInput = document.getElementById("skill-input");
+  const addSkillBtn = document.getElementById("add-skill-btn");
+
   addSkillBtn.addEventListener("click", () => {
     const value = skillInput.value.trim();
     if (value == "") return;
 
-    addSkillToList(value);
+    skills.push(value);
+    renderSkills(skills);
+
     skillInput.value = "";
   });
 }

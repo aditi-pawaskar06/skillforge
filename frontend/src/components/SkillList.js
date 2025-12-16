@@ -1,8 +1,11 @@
 const skillsList = document.getElementById('skills-list');
 
-export function addSkillToList(skill) {
-    const li = document.createElement("li");
-    li.textContent = skill;
-    skillsList.appendChild(li);
+export function renderSkills(skills) {
+    skillsList.innerHTML = "";
 
+    skills.forEach((skill)=>{
+        const li = document.createElement("li");
+        li.textContent = skill;
+        skillsList.appendChild(li);
+    });  
 }
